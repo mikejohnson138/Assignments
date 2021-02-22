@@ -1,13 +1,20 @@
 package week2;
-
+/** This Program Draws 10 Random Circles of 
+ * 10 Random sizes and
+ * 10 different colors (including white)
+ */
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 import acm.util.RandomGenerator;
 
 public class  RandomCircles extends GraphicsProgram{
-private static final int NUMBER_CIRCLES = 10;
-private static final double MIN_RADIUS= 5;
-private static final double MAX_RADIUS= 50;
+	
+	/*Creates the number and size of the circles*/
+	private static final int NUMBER_CIRCLES = 10;
+	private static final double MIN_RADIUS= 5;
+	private static final double MAX_RADIUS= 50;
+
+/* This runs the program */
 public void run() {
 	
 	for (int i=0; i<NUMBER_CIRCLES; i++) {
@@ -18,8 +25,11 @@ public void run() {
 		circle.setFilled(true);
 		circle.setColor(rgen.nextColor());
 		add(circle);
+	
+
 	}
 }
+/* Creates an instance variable for the random number generator */
 private RandomGenerator rgen = RandomGenerator.getInstance();
 }
 
